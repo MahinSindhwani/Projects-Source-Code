@@ -8,22 +8,24 @@ const images=[
 ];
 
 
-a=Math.floor(Math.random()*6);
-b=Math.floor(Math.random()*6);
+function luck(){
+    
+    a=Math.floor(Math.random()*6);
+    b=Math.floor(Math.random()*6);
+    var player1=document.getElementById("p1");
+    var player2=document.getElementById("p2");
+    player1.src=images[a];
+    player2.src=images[b];
 
 
-var player1=document.getElementById("p1");
-var player2=document.getElementById("p2");
-player1.src=images[a];
-player2.src=images[b];
-
-heading=document.getElementById("heading");
-if(a>b){
-    heading.innerHTML="Player 1 wins";
-}
-else if(a<b){
-    heading.innerHTML="Player 2 wins";
-}
-else{
-    heading.innerHTML="Draw";
+    heading=document.getElementById("heading");
+    if(a>b){
+        heading.innerHTML="Player 1 wins";
+    }
+    else if(a<b){
+        heading.innerHTML="Player 2 wins";
+    }
+    else{
+        heading.innerHTML="Draw";
+    }
 }
